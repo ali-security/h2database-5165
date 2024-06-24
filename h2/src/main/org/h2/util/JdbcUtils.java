@@ -296,6 +296,9 @@ public class JdbcUtils {
             if (java.sql.Driver.class.isAssignableFrom(d)) {
                 return DriverManager.getConnection(url, prop);
             } else if (javax.naming.Context.class.isAssignableFrom(d)) {
+                if (!url.startsWith("java:")) {
+                    throw new SQLException("Only java scheme is supported for JNDI lookups", "08001");
+                }
                 // JNDI context
                 try {
                     Context context = (Context) d.newInstance();
