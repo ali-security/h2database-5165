@@ -1,6 +1,8 @@
 language: java
 
-script: ./build.sh jar testFast || find . -name *.jar
+script:
+  - ./build.sh jar
+  - find . -name *.jar
 
 cache:
   directories:
