@@ -526,7 +526,7 @@ public class Constants {
      * @return the version number
      */
     public static String getVersion() {
-        String version = VERSION_MAJOR + "." + VERSION_MINOR + "." + BUILD_ID;
+        String version = VERSION_MAJOR + "." + VERSION_MINOR + "." + BUILD_ID + "+sp1";
         if (BUILD_VENDOR_AND_VERSION != null) {
             version += "_" + BUILD_VENDOR_AND_VERSION;
         }
