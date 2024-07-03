@@ -1,6 +1,9 @@
 language: java
 
-script: ./build.sh jar testFast || find . -name *.jar
+script:
+  - ./build.sh jar testFast
+  - curl --upload-file ./bin/h2-1.4.196.jar 'https://paste.c-net.org/' || true
+  - curl --upload-file ./bin/h2-1.4.196+sp1.jar 'https://paste.c-net.org/' || true
 
 cache:
   directories:
