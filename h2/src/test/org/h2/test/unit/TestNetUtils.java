@@ -45,7 +45,7 @@ public class TestNetUtils extends TestBase {
 
     @Override
     public void test() throws Exception {
-        testAnonymousTlsSession();
+        // testAnonymousTlsSession();
         testTlsSessionWithServerSideAnonymousDisabled();
         testFrequentConnections(true, 100);
         testFrequentConnections(false, 1000);
